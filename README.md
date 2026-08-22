@@ -119,6 +119,29 @@ motto: "In God we trust, all others must bring data." — W. Edwards Deming
 
 ---
 
+### 🏆 Achievements & Milestones
+
+<div align="center">
+  <!-- GitHub Dynamic Trophies -->
+  <a href="https://github.com/Kimobest">
+    <img src="https://github-profile-trophy.vercel.app/?username=Kimobest&theme=tokyonight&no-frame=false&no-bg=false&margin-w=4&row=1&column=7" alt="Kareem's GitHub Trophies" />
+  </a>
+</div>
+
+<br/>
+
+| Badge / Category | Milestone / Certificate | Issuing Org / Platform | Status |
+| :---: | :--- | :--- | :---: |
+| 🥇 | **Data Science & Machine Learning Specialist** | Coursera / DeepLearning.AI | `Completed` |
+| 📊 | **Data Analysis with Python (Pandas & NumPy)** | FreeCodeCamp / Kaggle | `Completed` |
+| 🤖 | **Supervised & Unsupervised Machine Learning** | Stanford Online / Kaggle | `Completed` |
+| 💡 | **SQL for Data Engineering & Analytics** | HackerRank / DataCamp | `Verified` |
+| 🚀 | **Open Source Contributor & AI Explorer** | GitHub Community | `Active` |
+
+*(💡 Tip: Feel free to edit the course names and links above with your actual certificates!)*
+
+---
+
 ### 📁 Featured Projects (Showcase)
 
 | Project Name | Description | Tech Stack | Link |
