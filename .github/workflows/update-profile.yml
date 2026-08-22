@@ -59,7 +59,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/github-stats.svg partials/05_timeline.md README.md
+          git add assets/ partials/05_timeline.md README.md
           
           if git diff --staged --quiet; then
             echo "[*] No changes detected in metrics or digest. Skipping commit."

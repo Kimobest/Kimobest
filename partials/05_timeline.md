@@ -3,9 +3,11 @@
 ### 📊 This Week's Contribution Activity
 
 <!--ACTIVITY:START-->
-- 🔥 **14 commits** across **2 repos**
-- ⭐ **Most active:** [Kimobest](https://github.com/Kimobest/Kimobest) (12 commits)
-- 🌱 **Current streak:** 2 days *(Longest: 5 days)*
-- 🕐 **Most productive day:** Saturday (12 commits)
-- 📦 **Milestone:** Automated profile pipeline and developer metrics configured
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/activity-digest-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/activity-digest-light.svg">
+    <img src="assets/activity-digest-dark.svg" width="100%" alt="Weekly Contribution Activity Digest" />
+  </picture>
+</div>
 <!--ACTIVITY:END-->
