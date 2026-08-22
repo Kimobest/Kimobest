@@ -2,24 +2,23 @@
 """
 build_readme.py
 Compiles modular markdown partials from partials/ into the root README.md.
-Dynamically injects live activity feed data between marker tags.
+Dynamically injects the narrative Contribution Activity Timeline.
 Zero external dependencies - Uses pure Python 3 standard library.
 """
 
 import os
 import re
 import sys
-from fetch_activity import get_activity_markdown
+from generate_timeline import fetch_timeline_data, generate_timeline_markdown
 
-START_MARKER = "<!--LATEST-ACTIVITY:START-->"
-END_MARKER = "<!--LATEST-ACTIVITY:END-->"
+TIMELINE_START = "<!--ACTIVITY-TIMELINE:START-->"
+TIMELINE_END = "<!--ACTIVITY-TIMELINE:END-->"
 
-def assemble_readme(partials_dir: str, output_path: str, username: str, token: str, rss_url: str):
+def assemble_readme(partials_dir: str, output_path: str, username: str, token: str):
     if not os.path.exists(partials_dir):
         print(f"[Error] Partials directory not found: {partials_dir}", file=sys.stderr)
         sys.exit(1)
 
-    # 1. Collect all .md partials in sorted order
     partial_files = sorted([
         f for f in os.listdir(partials_dir) if f.endswith(".md")
     ])
@@ -44,18 +43,20 @@ def assemble_readme(partials_dir: str, output_path: str, username: str, token: s
 
     assembled_text = "\n\n".join(content_blocks) + "\n"
 
-    # 2. Inject Dynamic Activity between markers
-    if START_MARKER in assembled_text and END_MARKER in assembled_text:
-        print("[*] Injecting live activity feed between markers...")
-        activity_md = get_activity_markdown(username, token, rss_url)
+    # Inject Narrative Contribution Activity Timeline
+    if TIMELINE_START in assembled_text and TIMELINE_END in assembled_text:
+        print("[*] Computing and injecting Contribution Activity Timeline...")
+        user_data = fetch_timeline_data(token, username)
+        timeline_md = generate_timeline_markdown(user_data, username)
+        
         pattern = re.compile(
-            f"{re.escape(START_MARKER)}.*?{re.escape(END_MARKER)}",
+            f"{re.escape(TIMELINE_START)}.*?{re.escape(TIMELINE_END)}",
             re.DOTALL
         )
-        replacement = f"{START_MARKER}\n{activity_md}\n{END_MARKER}"
+        replacement = f"{TIMELINE_START}\n{timeline_md}\n{TIMELINE_END}"
         assembled_text = pattern.sub(replacement, assembled_text)
 
-    # 3. Write final README.md
+    # Write final README.md
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(assembled_text)
 
@@ -64,11 +65,10 @@ def assemble_readme(partials_dir: str, output_path: str, username: str, token: s
 def main():
     username = os.environ.get("GITHUB_USERNAME", "Kimobest")
     token = os.environ.get("GITHUB_TOKEN", "")
-    rss_url = os.environ.get("RSS_FEED_URL", "")
     partials_dir = os.environ.get("PARTIALS_DIR", "partials")
     output_path = os.environ.get("README_OUTPUT_PATH", "README.md")
 
-    assemble_readme(partials_dir, output_path, username, token, rss_url)
+    assemble_readme(partials_dir, output_path, username, token)
 
 if __name__ == "__main__":
     main()

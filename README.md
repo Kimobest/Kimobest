@@ -115,31 +115,26 @@ motto: "In God we trust, all others must bring data." — W. Edwards Deming
 
 ---
 
-### 📈 GitHub Analytics & Stats
+### 📈 GitHub Analytics & Metrics
 
 <div align="center">
   <!-- Custom Self-Hosted First-Party SVG Stats Card -->
   <img src="assets/github-stats.svg" width="100%" alt="Kareem's GitHub Stats" />
 </div>
 
-<br/>
-
-<div align="center">
-  <!-- Interactive Activity Wave Graph -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Kimobest&theme=tokyo-night&hide_border=true&area=true" width="100%" alt="Activity Wave Graph" />
-</div>
-
 ---
 
-### 🐍 Snake Contribution Activity
+### 📊 Contribution Activity Timeline
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kimobest/Kimobest/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Kimobest/Kimobest/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/Kimobest/Kimobest/output/github-contribution-grid-snake-dark.svg" width="100%" />
-  </picture>
-</div>
+<!--ACTIVITY-TIMELINE:START-->
+> *Weekly digest updated as of **Aug 22, 2026***
+>
+> - 🔥 **Recent Activity:** Continuous development on Data Science & Machine Learning pipelines
+> - 🏆 **Most Active Project:** [Kimobest](https://github.com/Kimobest/Kimobest) *(Profile System & Automation)*
+> - ⚡ **Current Streak:** Active builder & daily contributor
+> - 🕐 **Peak Productivity:** Weekend deep-work sessions
+> - 📦 **Focus:** Predictive Modeling, Exploratory Data Analysis, and Python Architecture
+<!--ACTIVITY-TIMELINE:END-->
 
 ---
 
