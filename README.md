@@ -117,20 +117,6 @@ motto: "In God we trust, all others must bring data." — W. Edwards Deming
   <img src="https://streak-stats.demolab.com/?user=Kimobest&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </div>
 
----
-
-### 📁 Featured Projects (Showcase)
-
-| Project Name | Description | Tech Stack | Link |
-| :--- | :--- | :--- | :---: |
-| 📊 **Customer Churn Prediction** | Predictive classification model to forecast customer attrition with high accuracy. | `Python`, `Scikit-Learn`, `Pandas` | [View Repo ↗](https://github.com/Kimobest) |
-| 🏡 **House Price Regression** | End-to-end regression model with feature engineering and hyperparameter tuning. | `XGBoost`, `Seaborn`, `NumPy` | [View Repo ↗](https://github.com/Kimobest) |
-| 🔍 **Exploratory Data Analysis Dashboard** | Interactive dashboard revealing key trends and actionable business intelligence. | `Power BI` / `Streamlit`, `SQL` | [View Repo ↗](https://github.com/Kimobest) |
-
-*(💡 Tip: Replace these with your actual repositories as you publish them!)*
-
----
-
 ### 🤝 Let's Connect!
 
 <div align="center">
