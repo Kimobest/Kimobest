@@ -128,17 +128,32 @@ motto: "In God we trust, all others must bring data." — W. Edwards Deming
   </a>
 </div>
 
-<br/>
-
-| Badge / Category | Milestone / Certificate | Issuing Org / Platform | Status |
-| :---: | :--- | :--- | :---: |
-| 🥇 | **Data Science & Machine Learning Specialist** | Coursera / DeepLearning.AI | `Completed` |
-| 📊 | **Data Analysis with Python (Pandas & NumPy)** | FreeCodeCamp / Kaggle | `Completed` |
-| 🤖 | **Supervised & Unsupervised Machine Learning** | Stanford Online / Kaggle | `Completed` |
-| 💡 | **SQL for Data Engineering & Analytics** | HackerRank / DataCamp | `Verified` |
-| 🚀 | **Open Source Contributor & AI Explorer** | GitHub Community | `Active` |
-
-*(💡 Tip: Feel free to edit the course names and links above with your actual certificates!)*
+<div align="center">
+  <!-- Official GitHub Achievements Badges Gallery -->
+  <a href="https://github.com/Kimobest?tab=achievements">
+    <img src="https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png" width="65px" alt="Pull Shark" title="Pull Shark" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Kimobest?tab=achievements">
+    <img src="https://github.githubassets.com/assets/quickdraw-default-39c6aec8ff89.png" width="65px" alt="Quickdraw" title="Quickdraw" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Kimobest?tab=achievements">
+    <img src="https://github.githubassets.com/assets/pair-extraordinaire-default-0c46bc65ca77.png" width="65px" alt="Pair Extraordinaire" title="Pair Extraordinaire" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Kimobest?tab=achievements">
+    <img src="https://github.githubassets.com/assets/starstruck-default-b6610abad518.png" width="65px" alt="Starstruck" title="Starstruck" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Kimobest?tab=achievements">
+    <img src="https://github.githubassets.com/assets/galaxy-brain-default-5c93c14c2780.png" width="65px" alt="Galaxy Brain" title="Galaxy Brain" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Kimobest?tab=achievements">
+    <img src="https://github.githubassets.com/assets/yolo-default-be0bbff42e6a.png" width="65px" alt="YOLO" title="YOLO" />
+  </a>
+</div>
 
 ---
 
