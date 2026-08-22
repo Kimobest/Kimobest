@@ -112,18 +112,7 @@ motto: "In God we trust, all others must bring data." — W. Edwards Deming
 ### 📈 GitHub Analytics & Stats
 
 <div align="center">
-  <table border="0">
-    <tr>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=Kimobest&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Kareem's GitHub Stats" />
-      </td>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kimobest&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-      </td>
-    </tr>
-  </table>
-
-  <img src="https://streak-stats.demolab.com/?user=Kimobest&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+  <img src="https://github-stats-alpha.vercel.app/api?username=Kimobest&show_icons=true" alt="Kareem's GitHub Stats" />
 </div>
 
 <br/>
