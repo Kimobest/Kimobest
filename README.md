@@ -61,6 +61,15 @@ motto: "In God we trust, all others must bring data." — W. Edwards Deming
 ### 🛠️ Tech Stack & Skills
 
 <div align="center">
+  <!-- Modern Animated Skill Icons -->
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=py,sql,cpp,pandas,numpy,sklearn,tensorflow,pytorch,matlab,powershell,git,github,vscode,kaggle&theme=dark" />
+  </a>
+</div>
+
+<br/>
+
+<div align="center">
 
 #### 💻 Programming Languages
 <p>
@@ -96,6 +105,32 @@ motto: "In God we trust, all others must bring data." — W. Edwards Deming
   <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle" />
 </p>
 
+</div>
+
+---
+
+### 📈 GitHub Analytics & Stats
+
+<div align="center">
+  <table border="0">
+    <tr>
+      <td>
+        <img src="https://github-readme-stats.vercel.app/api?username=Kimobest&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Kareem's GitHub Stats" />
+      </td>
+      <td>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kimobest&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+      </td>
+    </tr>
+  </table>
+
+  <img src="https://streak-stats.demolab.com/?user=Kimobest&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</div>
+
+<br/>
+
+<div align="center">
+  <!-- Interactive Activity Wave Graph -->
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Kimobest&theme=tokyo-night&hide_border=true&area=true" width="100%" alt="Activity Wave Graph" />
 </div>
 
 ---
