@@ -1,3 +1,9 @@
+<!-- ================================================================= -->
+<!-- ⚠️ AUTO-GENERATED FILE — DO NOT EDIT DIRECTLY                     -->
+<!-- Edit files in partials/ and run: python scripts/build_readme.py   -->
+<!-- ================================================================= -->
+
+
 <div align="center">
 
   <!-- Header Banner -->
@@ -112,7 +118,8 @@ motto: "In God we trust, all others must bring data." — W. Edwards Deming
 ### 📈 GitHub Analytics & Stats
 
 <div align="center">
-  <img src="https://github-stats-alpha.vercel.app/api?username=Kimobest&show_icons=true" alt="Kareem's GitHub Stats" />
+  <!-- Custom Self-Hosted First-Party SVG Stats Card -->
+  <img src="assets/github-stats.svg" width="100%" alt="Kareem's GitHub Stats" />
 </div>
 
 <br/>
@@ -120,14 +127,6 @@ motto: "In God we trust, all others must bring data." — W. Edwards Deming
 <div align="center">
   <!-- Interactive Activity Wave Graph -->
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Kimobest&theme=tokyo-night&hide_border=true&area=true" width="100%" alt="Activity Wave Graph" />
-</div>
-
----
-
-### 🏙️ 3D Contribution Landscape
-
-<div align="center">
-  <img src="profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="Kimobest's 3D Contribution City" />
 </div>
 
 ---
@@ -144,25 +143,45 @@ motto: "In God we trust, all others must bring data." — W. Edwards Deming
 
 ---
 
-### 🤝 Let's Connect!
+### ⚡ Recent Activity & Development Feed
+
+<!--LATEST-ACTIVITY:START-->
+- 🚀 **Pushed to** [Kimobest/Kimobest](https://github.com/Kimobest/Kimobest) — `Code update` *(2026-08-22)*
+<!--LATEST-ACTIVITY:END-->
+
+---
+
+### 📁 Featured Projects Showcase
+
+| Project Name | Description | Tech Stack | Link |
+| :--- | :--- | :--- | :---: |
+| 📊 **Customer Churn Prediction** | End-to-end predictive classification model to forecast customer attrition with high precision. | `Python`, `Scikit-Learn`, `Pandas` | [View Repo ↗](https://github.com/Kimobest) |
+| 🏡 **House Price Regression** | Machine Learning regression pipeline with automated feature engineering and hyperparameter tuning. | `XGBoost`, `Seaborn`, `NumPy` | [View Repo ↗](https://github.com/Kimobest) |
+| 🔍 **Exploratory Data Analysis Dashboard** | Interactive business intelligence and exploratory data visualization dashboard. | `Power BI` / `Streamlit`, `SQL` | [View Repo ↗](https://github.com/Kimobest) |
+
+*(💡 Tip: Add new projects or edit these links anytime in `partials/07_projects.md`)*
+
+---
+
+### 🤝 Let's Connect & Collaborate!
 
 <div align="center">
-  <p>I'm always open to discussing data science, collaboration on exciting projects, or potential opportunities!</p>
+  <p>I'm always open to discussing data science, collaboration on exciting AI/ML projects, or potential opportunities!</p>
 
-  <a href="https://www.linkedin.com/in/kareem-alaa-6864b0363/">
-    <img src="https://img.shields.io/badge/LinkedIn-Kareem%20Alaa-0077B5?style=flat-square&logo=linkedin&logoColor=white" />
+  <a href="https://www.linkedin.com/in/kareem-alaa-6864b0363/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Kareem%20Alaa-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   &nbsp;
-  <a href="https://www.facebook.com/Kimobest2005">
-    <img src="https://img.shields.io/badge/Facebook-Kimobest-1877F2?style=flat-square&logo=facebook&logoColor=white" />
+  <a href="https://www.facebook.com/Kimobest2005" target="_blank">
+    <img src="https://img.shields.io/badge/Facebook-Kimobest-1877F2?style=flat-square&logo=facebook&logoColor=white" alt="Facebook" />
   </a>
   &nbsp;
-  <a href="https://www.instagram.com/kimo_best_2005/">
-    <img src="https://img.shields.io/badge/Instagram-@kimo__best__2005-E4405F?style=flat-square&logo=instagram&logoColor=white" />
+  <a href="https://www.instagram.com/kimo_best_2005/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-@kimo__best__2005-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram" />
   </a>
   &nbsp;
   <a href="mailto:kimobest2005@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-Contact%20Me-D14836?style=flat-square&logo=gmail&logoColor=white" />
+    <img src="https://img.shields.io/badge/Gmail-Contact%20Me-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Gmail" />
   </a>
 </div>
 

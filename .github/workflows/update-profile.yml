@@ -1,0 +1,64 @@
+name: Automated Profile README & Stats Update
+
+on:
+  schedule:
+    # Runs every 6 hours to refresh stats, streaks, and activity feed
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "partials/**"
+      - "scripts/**"
+      - ".github/workflows/update-profile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update-profile:
+    name: Build & Refresh Profile
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate Custom SVG Stats Card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: Kimobest
+          STATS_OUTPUT_PATH: assets/github-stats.svg
+        run: |
+          python scripts/generate_stats.py
+
+      - name: Compile README from Partials & Inject Live Activity Feed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: Kimobest
+          PARTIALS_DIR: partials
+          README_OUTPUT_PATH: README.md
+          RSS_FEED_URL: ${{ secrets.BLOG_RSS_URL }}
+        run: |
+          python scripts/build_readme.py
+
+      - name: Commit & Push Changes (Idempotent)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/github-stats.svg README.md
+          
+          if git diff --staged --quiet; then
+            echo "[*] No changes detected. Skipping commit."
+          else
+            echo "[*] Changes detected. Committing and pushing updates..."
+            git commit -m "chore: auto-update profile metrics and activity feed [skip ci]"
+            git push
+          fi
