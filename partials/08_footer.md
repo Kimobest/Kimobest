@@ -3,22 +3,32 @@
 ### 🤝 Let's Connect & Collaborate!
 
 <div align="center">
-  <p>I'm always open to discussing data science, collaboration on exciting AI/ML projects, or potential opportunities!</p>
+  <p>I'm always open to discussing data science, collaborating on exciting AI/ML projects, or exploring new opportunities!</p>
 
   <a href="https://www.linkedin.com/in/kareem-alaa-6864b0363/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Kareem%20Alaa-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  &nbsp;
-  <a href="https://www.facebook.com/Kimobest2005" target="_blank">
-    <img src="https://img.shields.io/badge/Facebook-Kimobest-1877F2?style=flat-square&logo=facebook&logoColor=white" alt="Facebook" />
-  </a>
-  &nbsp;
-  <a href="https://www.instagram.com/kimo_best_2005/" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-@kimo__best__2005-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram" />
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   &nbsp;
   <a href="mailto:kimobest2005@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-Contact%20Me-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Gmail" />
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Kimobest" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  &nbsp;
+  <a href="https://www.facebook.com/Kimobest2005" target="_blank">
+    <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" />
+  </a>
+  &nbsp;
+  <a href="https://www.instagram.com/kimo_best_2005/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+  </a>
+
+  <br/><br/>
+
+  <a href="#-about-me">
+    <img src="https://img.shields.io/badge/Back%20to%20Top-00E5FF?style=flat-square&logo=github&logoColor=black" alt="Back to Top" />
   </a>
 </div>
 
