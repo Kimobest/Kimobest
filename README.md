@@ -124,6 +124,14 @@ motto: "In God we trust, all others must bring data." — W. Edwards Deming
 
 ---
 
+### 🏙️ 3D Contribution Landscape
+
+<div align="center">
+  <img src="profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="Kimobest's 3D Contribution City" />
+</div>
+
+---
+
 ### 🐍 Snake Contribution Activity
 
 <div align="center">
