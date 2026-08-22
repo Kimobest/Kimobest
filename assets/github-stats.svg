@@ -24,7 +24,7 @@
   <g transform="translate(30, 75)">
     <rect width="168" height="48" rx="8" fill="#161B22" stroke="#30363D"/>
     <text x="14" y="21" class="stat-label">📊 Contributions</text>
-    <text x="14" y="39" class="stat-value">77</text>
+    <text x="14" y="39" class="stat-value">78</text>
   </g>
 
   <!-- Current Streak -->
