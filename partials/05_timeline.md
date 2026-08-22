@@ -1,13 +1,11 @@
 ---
 
-### 📊 Contribution Activity Timeline
+### 📊 This Week's Contribution Activity
 
-<!--ACTIVITY-TIMELINE:START-->
-> *Auto-generated weekly activity digest (Last 7 Days)*
->
-> - 🔥 **Weekly Velocity:** **14 commits** across **2 repositories**
-> - 🏆 **Most Active Project:** [Kimobest](https://github.com/Kimobest/Kimobest) *(12 commits)*
-> - ⚡ **Commit Streak:** **2 days** *(Longest: 5 days)*
-> - 🕐 **Peak Productivity:** **Saturday** (12 commits recorded)
-> - 📦 **Highlights:** Automated developer pipeline and custom metric architectures
-<!--ACTIVITY-TIMELINE:END-->
+<!--ACTIVITY:START-->
+- 🔥 **14 commits** across **2 repos**
+- ⭐ **Most active:** [Kimobest](https://github.com/Kimobest/Kimobest) (12 commits)
+- 🌱 **Current streak:** 2 days *(Longest: 5 days)*
+- 🕐 **Most productive day:** Saturday (12 commits)
+- 📦 **Milestone:** Automated profile pipeline and developer metrics configured
+<!--ACTIVITY:END-->

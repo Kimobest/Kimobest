@@ -1,9 +1,9 @@
-name: Automated Profile README & Stats Update
+name: Auto-Update Contribution Activity & Profile
 
 on:
   schedule:
-    # Runs every 6 hours to refresh stats, streaks, and activity feed
-    - cron: "0 */6 * * *"
+    # Runs daily at midnight UTC to refresh weekly digest and metrics
+    - cron: "0 0 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -17,8 +17,8 @@ permissions:
   contents: write
 
 jobs:
-  update-profile:
-    name: Build & Refresh Profile
+  update-activity-digest:
+    name: Generate Digest & Metrics
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate Custom SVG Stats Card
+      - name: 1. Generate Custom SVG Stats Card
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: Kimobest
@@ -39,26 +39,32 @@ jobs:
         run: |
           python scripts/generate_stats.py
 
-      - name: Compile README from Partials & Inject Live Activity Feed
+      - name: 2. Assemble README from Partials
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_USERNAME: Kimobest
           PARTIALS_DIR: partials
           README_OUTPUT_PATH: README.md
-          RSS_FEED_URL: ${{ secrets.BLOG_RSS_URL }}
         run: |
           python scripts/build_readme.py
 
-      - name: Commit & Push Changes (Idempotent)
+      - name: 3. Compute Weekly Activity Highlights & Inject Digest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: Kimobest
+          TARGET_README_PATH: README.md
+          TARGET_PARTIAL_PATH: partials/05_timeline.md
+        run: |
+          python scripts/contribution_digest.py
+
+      - name: 4. Commit & Push Updates (Idempotent Diff Check)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/github-stats.svg README.md
+          git add assets/github-stats.svg partials/05_timeline.md README.md
           
           if git diff --staged --quiet; then
-            echo "[*] No changes detected. Skipping commit."
+            echo "[*] No changes detected in metrics or digest. Skipping commit."
           else
             echo "[*] Changes detected. Committing and pushing updates..."
-            git commit -m "chore: auto-update profile metrics and activity feed [skip ci]"
+            git commit -m "chore: update contribution activity [skip ci]"
             git push
           fi

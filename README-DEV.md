@@ -1,119 +1,95 @@
-# 🛠️ Automated Profile README System — Developer & Operations Manual
+# 🛠️ Auto-Updating Profile System & Contribution Activity Module — Developer Manual
 
-Welcome to your automated GitHub profile README architecture. This repository is structured as a modular, self-updating system powered by **GitHub Actions** and lightweight **Python 3 scripts** with **zero external dependencies**.
+Welcome to the official developer documentation for the **Auto-Updating Contribution Activity & Profile System** of **Kareem Alaa (@Kimobest)**.
 
 ---
 
-## 🏗️ Architecture & Pipeline Overview
+## 🏗️ Architecture & Component Overview
 
-```
-Kimobest/ (Profile Repository)
+```text
+Kimobest/ (Special Profile Repository)
 │
 ├── .github/workflows/
-│   ├── snake.yml               # Generates daily animated snake eating contribution grid -> 'output' branch
-│   └── update-profile.yml      # Master pipeline: Custom Stats SVG + Activity Feed + README Assembly (Every 6h)
+│   └── update-profile.yml          # Daily cron & on-push workflow: runs stats generator, builds README, and injects weekly digest
 │
 ├── scripts/
-│   ├── generate_stats.py       # Queries GraphQL API, calculates streaks & language bytes, renders self-hosted SVG
-│   ├── fetch_activity.py       # Parses RSS feed or GitHub public events fallback
-│   └── build_readme.py         # Assembles partials/ into root README.md & injects dynamic feed
+│   ├── contribution_digest.py      # GraphQL API client -> compute_highlights() -> in-place README injector
+│   ├── generate_stats.py           # First-party custom SVG stats generator (Total contributions, streaks, languages)
+│   └── build_readme.py             # Modular partials compiler
 │
-├── partials/                   # Modular Markdown components (Edit these to customize content)
-│   ├── 01_header.md            # Animated banner, Typing SVG title, social shields
-│   ├── 02_about.md             # About Me (Data Science & ML focus)
-│   ├── 03_skills.md            # Modern Skillicons grid & categorized badges
-│   ├── 04_stats.md             # Custom self-hosted SVG stats card & activity wave graph
-│   ├── 05_snake.md             # Contribution snake animation wrapper
-│   ├── 06_activity.md          # Dynamic activity feed markers <!--LATEST-ACTIVITY:START-->
-│   ├── 07_projects.md          # Featured Data Science portfolio showcase table
-│   └── 08_footer.md            # Let's connect links & bottom wave footer
+├── partials/                       # 🧩 Modular Markdown blocks
+│   ├── 01_header.md                # Banner, typing animation, contact badges
+│   ├── 02_about.md                 # Data Science profile card
+│   ├── 03_skills.md                # Skillicons grid & categorized badges
+│   ├── 04_stats.md                 # Custom SVG stats card embed
+│   ├── 05_timeline.md              # Target container with <!--ACTIVITY:START--> and <!--ACTIVITY:END-->
+│   └── 08_footer.md                # Contact links and wave footer
 │
 ├── assets/
-│   └── github-stats.svg        # 100% self-hosted, custom-rendered SVG stats card
+│   └── github-stats.svg            # 100% self-hosted, custom-rendered dark/neon SVG stats card
 │
-├── README.md                   # The final compiled README rendered by GitHub
-└── README-DEV.md               # This maintenance and developer documentation
+├── README.md                       # Compiled root README rendered on GitHub profile
+└── README-DEV.md                   # This operations and maintenance manual
 ```
 
 ---
 
-## ⚡ How the Automated Modules Work
+## ⚡ How the Contribution Activity Module Works
 
-### 1. Custom SVG Stats Generator (`scripts/generate_stats.py`)
-- **First-Party & Self-Hosted:** No reliance on 3rd-party services (e.g. `github-readme-stats.vercel.app`), guaranteeing 100% uptime with zero 503 errors.
-- **GraphQL API Authentication:** Authenticates securely using the built-in `${{ secrets.GITHUB_TOKEN }}`.
-- **Calculated Metrics:**
-  - `Total Contributions`: Calendar sum across the current contribution year.
-  - `Current & Longest Streak`: Chronologically computed from contribution calendar days.
-  - `Total Stars Earned`: Real-time sum of stargazers across all owned repositories.
-  - `Top Languages`: Exact byte-weighted calculation with a proportional neon progress bar.
-  - `Latest Active Repository`: Identifies the most recently updated project.
-- **Output:** Renders and commits directly to `assets/github-stats.svg`.
+### 1. GraphQL API Query (`scripts/contribution_digest.py`)
+Queries the GitHub GraphQL API in a single request:
+- **`weeklyActivity` (Past 7 days):** Commits grouped by repository, daily contribution counts, new repositories created, PRs and issues.
+- **`annualActivity` (Past 365 days):** Full contribution calendar for calculating uninterrupted contribution streaks.
 
-### 2. Live Activity & Blog Feed (`scripts/fetch_activity.py`)
-- **RSS Blog Feed (Optional):** If you configure a secret or env var `BLOG_RSS_URL` (e.g. Medium, Dev.to, or Hashnode), the script parses the top 3 latest articles.
-- **GitHub Public Activity (Fallback):** If no RSS URL is provided, it automatically fetches your latest 4 public GitHub contributions (Pushed commits, Merged Pull Requests, Created Repositories, Starred projects).
+### 2. Pure Highlights Computation Logic (`compute_highlights(rawData)`)
+Derives actionable intelligence from raw GraphQL arrays:
+- **Total Commits & Repositories:** Aggregates commits made across unique repositories in the last 7 days.
+- **Most Active Project:** Identifies the top repository by commit volume with repository URL and exact commit count.
+- **Commit Streak:** Chronologically calculates current continuous streak and all-time longest streak in days.
+- **Peak Productivity Day:** Groups commits by day of the week to highlight the most productive workday/weekend.
+- **Milestones:** Detects new repositories, merged PRs, resolved issues, or high-velocity sprints.
 
-### 3. README Modular Assembly System (`scripts/build_readme.py`)
-- **Partials Compilation:** Reads files in `partials/` sorted in alphanumeric order (`01_header.md` through `08_footer.md`).
-- **Dynamic In-Place Replacement:** Locates `<!--LATEST-ACTIVITY:START-->` and `<!--LATEST-ACTIVITY:END-->` in `partials/06_activity.md` and injects live markdown.
-- **Idempotency:** Generates `README.md`. If no content has changed, git skips committing to prevent empty commit pollution.
-
----
-
-## 🚀 Step-by-Step Setup & Verification Instructions
-
-### Step 1: Verify GitHub Workflow Permissions
-Ensure GitHub Actions can push updates back to your repository:
-1. Navigate to: **Settings** > **Actions** > **General**
-2. Scroll down to **Workflow permissions**.
-3. Select **Read and write permissions** ✅.
-4. Check **Allow GitHub Actions to create and approve pull requests** ✅.
-5. Click **Save**.
-
-### Step 2: (Optional) Add Blog RSS Feed URL
-If you want the activity feed to display your personal blog posts:
-1. Go to: **Settings** > **Secrets and variables** > **Actions**
-2. Click **New repository secret**.
-3. Name: `BLOG_RSS_URL`
-4. Value: `https://medium.com/feed/@yourusername` (or your custom RSS link).
-5. Click **Add secret**.
-
-### Step 3: Test Workflows Manually (`workflow_dispatch`)
-Before waiting for the cron schedule, trigger both workflows to verify:
-1. Open the **Actions** tab: `https://github.com/Kimobest/Kimobest/actions`
-2. **Test 3D / Snake Action:**
-   - Select **Generate Snake Animation** > Click **Run workflow**.
-3. **Test Profile Build Pipeline:**
-   - Select **Automated Profile README & Stats Update** > Click **Run workflow**.
-4. Check that both workflows finish with a green checkmark (**✔**).
-
----
-
-## 💻 Local Development & Customization
-
-To edit your profile locally on your machine:
-
-```bash
-# 1. Edit any component inside partials/
-# e.g., edit partials/07_projects.md to add new Data Science repositories
-
-# 2. Test and re-compile README.md locally
-python scripts/generate_stats.py
-python scripts/build_readme.py
-
-# 3. Commit and push your updates
-git add partials/ README.md assets/
-git commit -m "docs: update featured projects in profile"
-git push origin main
+### 3. In-Place Markdown Injection
+The script scans `README.md` and `partials/05_timeline.md` for:
+```markdown
+<!--ACTIVITY:START-->
+- 🔥 **14 commits** across **2 repos**
+- ⭐ **Most active:** [Kimobest](https://github.com/Kimobest/Kimobest) (12 commits)
+- 🌱 **Current streak:** 2 days *(Longest: 5 days)*
+- 🕐 **Most productive day:** Saturday (12 commits)
+- 📦 **Milestone:** Automated developer pipeline and developer metrics configured
+<!--ACTIVITY:END-->
 ```
-
-When you push to `main`, GitHub Actions will automatically re-run the pipeline and keep all stats in sync.
+It updates strictly the contents between these markers without altering any other section of the file.
 
 ---
 
-## 🔒 Security & Performance Best Practices
+## 🤖 GitHub Actions Workflow (`.github/workflows/update-profile.yml`)
 
-- **Zero Token Leakage:** All API tokens are read from environment variables; zero hardcoded secrets.
-- **Loop Prevention:** Automated commits append `[skip ci]` to prevent endless workflow triggers.
-- **Free Quota Friendly:** Workflows run every 6 hours and take less than 5 seconds each, consuming less than 20 minutes/month out of your 2,000 free monthly GitHub Actions minutes.
+- **Schedule:** `cron: "0 0 * * *"` (Daily at midnight UTC).
+- **Manual Trigger:** Supports `workflow_dispatch` button in the GitHub UI.
+- **Push Trigger:** Re-runs automatically when you edit any file in `partials/**` or `scripts/**`.
+- **Permissions:** `contents: write` (least privilege).
+- **Identity:** Commits as `github-actions[bot]` with message `chore: update contribution activity [skip ci]`.
+- **Idempotency:** Checks `git diff --staged --quiet` and skips committing if content has not changed.
+
+---
+
+## 🚀 Step-by-Step Testing & Verification
+
+1. **Verify Workflow Permissions on GitHub:**
+   - Go to: **Settings** > **Actions** > **General**
+   - Scroll down to **Workflow permissions**.
+   - Select **Read and write permissions** ✅ and save.
+
+2. **Trigger Workflow Manually:**
+   - Go to: **Actions** tab (`https://github.com/Kimobest/Kimobest/actions`).
+   - Click **Auto-Update Contribution Activity & Profile**.
+   - Click **Run workflow** ⬇️.
+
+3. **Local Testing:**
+   ```bash
+   python scripts/generate_stats.py
+   python scripts/build_readme.py
+   python scripts/contribution_digest.py
+   ```
