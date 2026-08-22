@@ -8,20 +8,23 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
     steps:
       - uses: actions/checkout@v4
-      - uses: yashi98/github-profile-3d-contrib@0.7.1
+      - uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: Kimobest
       - name: Commit & Push
         run: |
-          git config user.name "Kimobest"
-          git config user.email "kimobest2005@gmail.com"
-          git add -A profile-3d-contrib
-          git commit -m "generated 3d profile contribution chart" || exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A .
+          git commit -m "generated 3d contribution chart" || exit 0
           git push
