@@ -56,16 +56,16 @@
     <title>Total commits logged over the past 7 days across all repositories</title>
     <rect width="260" height="46" rx="10" fill="#F6F8FA" stroke="#D0D7DE" stroke-width="1"/>
     <text x="14" y="20" class="pill-label">🔥 Weekly Velocity</text>
-    <text x="14" y="36" class="pill-value"><tspan class="pill-accent">23</tspan> commits <tspan fill="#656D76" font-size="12">(1 repos)</tspan></text>
+    <text x="14" y="36" class="pill-value"><tspan class="pill-accent">2</tspan> commits <tspan fill="#656D76" font-size="12">(1 repos)</tspan></text>
   </g>
 
   <!-- Pill 2 (Top-Right): Most Active Project (Clickable SVG Link) -->
-  <a xlink:href="https://github.com/Kimobest/Kimobest" target="_blank" class="clickable-link">
+  <a xlink:href="https://github.com/ahmedmohmed3991-del/EASP" target="_blank" class="clickable-link">
     <g transform="translate(310, 60)" class="interactive-pill">
-      <title>Click to open most active repository: Kimobest (23 commits)</title>
+      <title>Click to open most active repository: EASP (2 commits)</title>
       <rect width="260" height="46" rx="10" fill="#F6F8FA" stroke="#D0D7DE" stroke-width="1"/>
       <text x="14" y="20" class="pill-label">⭐ Most Active Project ↗</text>
-      <text x="14" y="36" class="pill-value">Kimobest <tspan fill="#656D76" font-size="12">(23 commits)</tspan></text>
+      <text x="14" y="36" class="pill-value">EASP <tspan fill="#656D76" font-size="12">(2 commits)</tspan></text>
     </g>
   </a>
 
@@ -74,7 +74,7 @@
     <title>Continuous unbroken contribution streak</title>
     <rect width="260" height="46" rx="10" fill="#F6F8FA" stroke="#D0D7DE" stroke-width="1"/>
     <text x="14" y="20" class="pill-label">🌱 Current Streak</text>
-    <text x="14" y="36" class="pill-value"><tspan class="pill-accent">0</tspan> days <tspan fill="#656D76" font-size="12">(Longest: 2d)</tspan></text>
+    <text x="14" y="36" class="pill-value"><tspan class="pill-accent">1</tspan> days <tspan fill="#656D76" font-size="12">(Longest: 2d)</tspan></text>
   </g>
 
   <!-- Pill 4 (Bottom-Right): Peak Productivity -->
@@ -82,65 +82,65 @@
     <title>Day of the week with the highest recorded commit volume</title>
     <rect width="260" height="46" rx="10" fill="#F6F8FA" stroke="#D0D7DE" stroke-width="1"/>
     <text x="14" y="20" class="pill-label">🕐 Peak Productivity</text>
-    <text x="14" y="36" class="pill-value">Sat <tspan fill="#656D76" font-size="12">(25 commits)</tspan></text>
+    <text x="14" y="36" class="pill-value">Sat <tspan fill="#656D76" font-size="12">(2 commits)</tspan></text>
   </g>
 
   <!-- 7-Day Mini Bar Graph -->
   
         <g class="mini-bar-group">
-          <title>Sun, 2026-08-23: 0 commits</title>
+          <title>Mon, 2026-08-24: 0 commits</title>
           <rect x="30" y="186" width="66" height="36" rx="4" fill="#F6F8FA" opacity="0.6"/>
           <rect x="30" y="219" width="66" height="3" rx="3" fill="#EAEFF2" class="bar-rect"/>
-          <text x="63.0" y="238" text-anchor="middle" class="bar-label">Sun</text>
+          <text x="63.0" y="238" text-anchor="middle" class="bar-label">Mon</text>
           <text x="63.0" y="182" text-anchor="middle" class="bar-val-label">-</text>
         </g>
         <g class="mini-bar-group">
-          <title>Mon, 2026-08-24: 0 commits</title>
+          <title>Tue, 2026-08-25: 0 commits</title>
           <rect x="109" y="186" width="66" height="36" rx="4" fill="#F6F8FA" opacity="0.6"/>
           <rect x="109" y="219" width="66" height="3" rx="3" fill="#EAEFF2" class="bar-rect"/>
-          <text x="142.0" y="238" text-anchor="middle" class="bar-label">Mon</text>
+          <text x="142.0" y="238" text-anchor="middle" class="bar-label">Tue</text>
           <text x="142.0" y="182" text-anchor="middle" class="bar-val-label">-</text>
         </g>
         <g class="mini-bar-group">
-          <title>Tue, 2026-08-25: 0 commits</title>
+          <title>Wed, 2026-08-26: 0 commits</title>
           <rect x="188" y="186" width="66" height="36" rx="4" fill="#F6F8FA" opacity="0.6"/>
           <rect x="188" y="219" width="66" height="3" rx="3" fill="#EAEFF2" class="bar-rect"/>
-          <text x="221.0" y="238" text-anchor="middle" class="bar-label">Tue</text>
+          <text x="221.0" y="238" text-anchor="middle" class="bar-label">Wed</text>
           <text x="221.0" y="182" text-anchor="middle" class="bar-val-label">-</text>
         </g>
         <g class="mini-bar-group">
-          <title>Wed, 2026-08-26: 0 commits</title>
+          <title>Thu, 2026-08-27: 0 commits</title>
           <rect x="267" y="186" width="66" height="36" rx="4" fill="#F6F8FA" opacity="0.6"/>
           <rect x="267" y="219" width="66" height="3" rx="3" fill="#EAEFF2" class="bar-rect"/>
-          <text x="300.0" y="238" text-anchor="middle" class="bar-label">Wed</text>
+          <text x="300.0" y="238" text-anchor="middle" class="bar-label">Thu</text>
           <text x="300.0" y="182" text-anchor="middle" class="bar-val-label">-</text>
         </g>
         <g class="mini-bar-group">
-          <title>Thu, 2026-08-27: 0 commits</title>
+          <title>Fri, 2026-08-28: 0 commits</title>
           <rect x="346" y="186" width="66" height="36" rx="4" fill="#F6F8FA" opacity="0.6"/>
           <rect x="346" y="219" width="66" height="3" rx="3" fill="#EAEFF2" class="bar-rect"/>
-          <text x="379.0" y="238" text-anchor="middle" class="bar-label">Thu</text>
+          <text x="379.0" y="238" text-anchor="middle" class="bar-label">Fri</text>
           <text x="379.0" y="182" text-anchor="middle" class="bar-val-label">-</text>
         </g>
         <g class="mini-bar-group">
-          <title>Fri, 2026-08-28: 0 commits</title>
+          <title>Sat, 2026-08-29: 2 commits</title>
           <rect x="425" y="186" width="66" height="36" rx="4" fill="#F6F8FA" opacity="0.6"/>
-          <rect x="425" y="219" width="66" height="3" rx="3" fill="#EAEFF2" class="bar-rect"/>
-          <text x="458.0" y="238" text-anchor="middle" class="bar-label">Fri</text>
-          <text x="458.0" y="182" text-anchor="middle" class="bar-val-label">-</text>
+          <rect x="425" y="186" width="66" height="36" rx="3" fill="#218BFF" class="bar-rect"/>
+          <text x="458.0" y="238" text-anchor="middle" class="bar-label">Sat</text>
+          <text x="458.0" y="182" text-anchor="middle" class="bar-val-label">2</text>
         </g>
         <g class="mini-bar-group">
-          <title>Sat, 2026-08-29: 0 commits</title>
+          <title>Sun, 2026-08-30: 0 commits</title>
           <rect x="504" y="186" width="66" height="36" rx="4" fill="#F6F8FA" opacity="0.6"/>
           <rect x="504" y="219" width="66" height="3" rx="3" fill="#EAEFF2" class="bar-rect"/>
-          <text x="537.0" y="238" text-anchor="middle" class="bar-label">Sat</text>
+          <text x="537.0" y="238" text-anchor="middle" class="bar-label">Sun</text>
           <text x="537.0" y="182" text-anchor="middle" class="bar-val-label">-</text>
         </g>
 
   <!-- Milestone Footer Chip -->
   <g transform="translate(30, 252)">
     <circle cx="6" cy="6" r="4" fill="#0969DA"/>
-    <text x="16" y="10" class="milestone-text">📦 <tspan font-weight="600">Milestone:</tspan> Created 1 new repository</text>
+    <text x="16" y="10" class="milestone-text">📦 <tspan font-weight="600">Milestone:</tspan> Continuous architecture & pipeline development</text>
   </g>
 
 </svg>
