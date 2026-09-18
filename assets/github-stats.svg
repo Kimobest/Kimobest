@@ -31,7 +31,7 @@
   <g transform="translate(216, 75)">
     <rect width="168" height="48" rx="8" fill="#161B22" stroke="#30363D"/>
     <text x="14" y="21" class="stat-label">🔥 Current Streak</text>
-    <text x="14" y="39" class="stat-value">1 <tspan fill="#8B949E" font-size="12">days</tspan></text>
+    <text x="14" y="39" class="stat-value">0 <tspan fill="#8B949E" font-size="12">days</tspan></text>
   </g>
 
   <!-- Total Stars -->
